@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilus.css">
+    <link rel="stylesheet" href="kulon.css">
+    <title>munkaim</title>
+    <style>
+        body {
+            margin-left: 200px;
+            background-color: rgba(105, 92, 165, 0.589);
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(hater.jpg);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: #033a44;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .close {
+            cursor: pointer;
+            float: right;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h1 ><a href="https://sites.google.com/view/my-tasks-tr/projekt">Tóth Regina munkái</a> </h1>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front"> 
+            <header><h6>Értékelő táblázat</h6></header>
+            <img src="kepek/prj1.png" alt="Avatar" style="width:300px;height:300px;">
+            <footer></footer>
+        </div>
+        <div class="flip-card-back">
+            <h5>Értékelő táblázat</h5> 
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front"> 
+            <header><h6>Elégedettségi kérdőív</h6></header>
+            <img src="kepek/elegedett.png" alt="Avatar" style="width:300px;height:300px;">
+            <footer></footer>
+        </div>
+        <div class="flip-card-back">
+            <h5>Elégedettségi kérdőív</h5> 
+            <a class="link"   href="https://tthregi.github.io/Tech4s/">Itt megtekintheted a publikált weboldalt</a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front"> 
+            <header><h6>Quiz-4-you</h6></header>
+            <img src="kepek/kviz.png" alt="Avatar" style="width:300px;height:300px;">
+            <footer></footer>
+        </div>
+        <div class="flip-card-back">
+            <h5>Quiz-4-you</h5> 
+            <a class="link"   href="https://shirelix.github.io/Quiz4You2.0/">Itt megtekintheted a publikált weboldalt</a>
+        </div>
+    </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+    <span class="close" id="close">&times;</span>
+    <h2>Tóth Regina</h2>
+    <img src="IMG_7172.JPG" alt="Példa kép" style="width: 100%;">
+    <p>Érdeklnek a művészettel (zenei, papir/vászon stb.) kapcsolatos dolgok ezért is érdekel a Web Designer-ség.</p>
+</div>
+
+<script>
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+    const close = document.getElementById('close');
+
+    // Popup automatikus megnyitása az oldal betöltésekor
+    window.onload = () => {
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+    };
+
+    close.addEventListener('click', () => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
